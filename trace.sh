@@ -1,7 +1,7 @@
 #!/bin/bash
 PS4='$LINENO: '
 declare -a ip_list
-readarray ip_list < ../ip_list.txt
+readarray ip_list < ip_list.txt
 ((ip_i = ${#ip_list[@]}))
 ((count = 0))
 while(("${count}" < "${ip_i}")); do
