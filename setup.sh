@@ -25,6 +25,6 @@ mv GeoLiteCity.dat /usr/share/GeoIP/GeoLiteCity.dat
 echo "Moving files to Document Root"
 find_d=$(grep -n -e "DocumentRoot" /etc/apache2/sites-available/default-ssl.conf)
 d_root=$(echo $find_d | cut -d " " -f 3)
-mv trace.sh "$rootfolder/trace.sh"
-mv index.php "$rootfolder/index.php"
+mv trace.sh $rootfolder/trace.sh
+mv index.php $rootfolder/index.php
 echo "Finished!"
