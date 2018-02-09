@@ -19,7 +19,7 @@ else
         echo "geoip-bin is installed"
 fi
 
-wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz -O GeoLiteCity.dat.$
+wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz -O GeoLiteCity.dat.gz
 gzip -d GeoLiteCity.dat.gz
 mv GeoLiteCity.dat /usr/share/GeoIP/GeoLiteCity.dat
 echo "Moving files to Document Root"
