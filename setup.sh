@@ -29,4 +29,5 @@ mv trace.sh "$d_root"/trace.sh
 mv index.php "$d_root"/index.php
 touch "$d_root"/../ip_list.txt
 chmod 777 "$d_root"/../ip_list.txt
+mv "$d_root"/index.html
 echo "Finished!"
