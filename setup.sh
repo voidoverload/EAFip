@@ -2,29 +2,29 @@
 PS4='$LINENO: '
 
 if ! [ -x "$(command -v php)"  ]; then
-	apt-get -qq update && apt-get -qq --yes --force-yes install php
+        apt-get -qq update && apt-get -qq --yes --force-yes install php
 else
-	echo "PHP is installed"
+        echo "PHP is installed"
 fi
 
 if ! [ -x "$(command -v apache2)" ]; then
-	apt-get -qq update && apt-get -qq --yes --force-yes install apache2
+        apt-get -qq update && apt-get -qq --yes --force-yes install apache2
 else
-	echo "apache2 is installed"
+        echo "apache2 is installed"
 fi
 
 if ! [ -x "$(command -v geoip-bin)" ]; then
-	apt-get -qq update && apt-get -qq --yes --force-yes install geoip-bin
+        apt-get -qq update && apt-get -qq --yes --force-yes install geoip-bin
 else
-	echo "geoip-bin is installed"
+        echo "geoip-bin is installed"
 fi
 
-wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz -O GeoLiteCity.dat.gz
+wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz -O GeoLiteCity.dat.$
 gzip -d GeoLiteCity.dat.gz
 mv GeoLiteCity.dat /usr/share/GeoIP/GeoLiteCity.dat
 echo "Moving files to Document Root"
 find_d=$(grep -n -e "DocumentRoot" /etc/apache2/sites-available/default-ssl.conf)
 d_root=$(echo $find_d | cut -d " " -f 3)
-mv trace.sh $rootfolder/trace.sh
-mv index.php $rootfolder/index.php
+mv trace.sh "$d_root"/trace.sh
+mv index.php "$d_root"/index.php
 echo "Finished!"
