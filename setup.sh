@@ -2,7 +2,7 @@
 PS4='$LINENO: '
 apt-get -qq update
 if ! [ -x "$(command -v php)"  ]; then
-        apt-get -qq --yes --force-yes install php
+        apt-get -qq --yes --force-yes install php libapache2-mod-php
 else
         echo "PHP is installed"
 fi
@@ -29,5 +29,5 @@ mv trace.sh "$d_root"/trace.sh
 mv index.php "$d_root"/index.php
 touch "$d_root"/../ip_list.txt
 chmod 777 "$d_root"/../ip_list.txt
-mv "$d_root"/index.html
-echo "Finished!"
+mv "$d_root"/index.html "$d_root"/000-index.html
+echo "setup finished"
