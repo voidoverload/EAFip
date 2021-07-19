@@ -1,5 +1,5 @@
 # EAFip
 
-A basic tool for catching ip addresses
+A basic tool for global analytics tracking.
 
-Run setup.sh as root
+Run setup.sh as root.
